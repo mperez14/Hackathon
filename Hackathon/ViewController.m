@@ -26,10 +26,11 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.mapMain.delegate = self;
-
+    [self.mapMain setShowsUserLocation:YES];
     
 }
-/*  Normal layout
+/*
+//Normal layout
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.locationManager requestAlwaysAuthorization];
@@ -37,7 +38,9 @@
 }
 */
 
-// Zoom on stadium
+
+
+ // Zoom on stadium
 -(void)viewWillAppear:(BOOL)animated {
     [self.locationManager requestAlwaysAuthorization];
     CLLocationCoordinate2D zoomLocation;  //Zoom in on location
@@ -46,7 +49,6 @@
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     //Limit location to confines of user (.5 miles)
-    
     
     [mapMain setRegion:viewRegion animated: YES]; //display region
 }
@@ -58,14 +60,16 @@
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
     [self.mapMain setRegion:[self.mapMain regionThatFits:region] animated:YES];
+    
+    
+    
 }
-
-
-
-- (void)mapMain:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+/*
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
     [self.mapMain setRegion:[self.mapMain regionThatFits:region] animated:YES];
+    
     
     // Add an annotation
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
@@ -75,6 +79,7 @@
     
     [self.mapMain addAnnotation:point];
 }
+*/
 
 //Show location
 - (IBAction)whereAmI:(id)sender {
@@ -83,16 +88,25 @@
 
     [self.locationManager startUpdatingLocation];
     
-    
     self.mapMain.showsUserLocation = YES;
     self.locationManager = [[CLLocationManager alloc] init];
     [self.mapMain addAnnotation:[self.mapMain userLocation]];
+
+    
     
 }
 
 - (IBAction)pinDrop:(id)sender {
     
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = [self.mapMain userLocation].coordinate;
+    point.title = @"Where am I?";
+    point.subtitle = @"I'm here!!!";
+    
+    [self.mapMain addAnnotation:point];
+    
 }
+
 
 
 @end
