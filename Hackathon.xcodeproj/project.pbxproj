@@ -12,8 +12,9 @@
 		07CBDF7A19D63A1A006147D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDF7919D63A1A006147D0 /* ViewController.m */; };
 		07CBDF7D19D63A1A006147D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CBDF7B19D63A1A006147D0 /* Main.storyboard */; };
 		07CBDF7F19D63A1A006147D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CBDF7E19D63A1A006147D0 /* Images.xcassets */; };
-		07CBDF8219D63A1A006147D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CBDF8019D63A1A006147D0 /* LaunchScreen.xib */; };
 		07CBDF8E19D63A1A006147D0 /* HackathonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDF8D19D63A1A006147D0 /* HackathonTests.m */; };
+		07CBDF9819D65A9B006147D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBDF9719D65A9B006147D0 /* MapKit.framework */; };
+		07CBDF9A19D710CA006147D0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBDF9919D710CA006147D0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +37,11 @@
 		07CBDF7919D63A1A006147D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07CBDF7C19D63A1A006147D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07CBDF7E19D63A1A006147D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		07CBDF8119D63A1A006147D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		07CBDF8719D63A1A006147D0 /* HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CBDF8C19D63A1A006147D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07CBDF8D19D63A1A006147D0 /* HackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackathonTests.m; sourceTree = "<group>"; };
+		07CBDF9719D65A9B006147D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07CBDF9919D710CA006147D0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CBDF9A19D710CA006147D0 /* CoreLocation.framework in Frameworks */,
+				07CBDF9819D65A9B006147D0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,8 @@
 		07CBDF6519D63A1A006147D0 = {
 			isa = PBXGroup;
 			children = (
+				07CBDF9919D710CA006147D0 /* CoreLocation.framework */,
+				07CBDF9719D65A9B006147D0 /* MapKit.framework */,
 				07CBDF7019D63A1A006147D0 /* Hackathon */,
 				07CBDF8A19D63A1A006147D0 /* HackathonTests */,
 				07CBDF6F19D63A1A006147D0 /* Products */,
@@ -87,7 +93,6 @@
 				07CBDF7919D63A1A006147D0 /* ViewController.m */,
 				07CBDF7B19D63A1A006147D0 /* Main.storyboard */,
 				07CBDF7E19D63A1A006147D0 /* Images.xcassets */,
-				07CBDF8019D63A1A006147D0 /* LaunchScreen.xib */,
 				07CBDF7119D63A1A006147D0 /* Supporting Files */,
 			);
 			path = Hackathon;
@@ -200,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CBDF7D19D63A1A006147D0 /* Main.storyboard in Resources */,
-				07CBDF8219D63A1A006147D0 /* LaunchScreen.xib in Resources */,
 				07CBDF7F19D63A1A006147D0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +254,6 @@
 				07CBDF7C19D63A1A006147D0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		07CBDF8019D63A1A006147D0 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07CBDF8119D63A1A006147D0 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
