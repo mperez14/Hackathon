@@ -35,6 +35,11 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.mapMain.showsUserLocation = YES;
    [self.mapMain addAnnotation:[self.mapMain userLocation]];
+    
+    //Parse
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
 
 
 }
@@ -47,22 +52,6 @@
 }
 
 
-/*
-
- // Focus on stadium
--(void)viewWillAppear:(BOOL)animated {
-    [self.locationManager requestAlwaysAuthorization];
-    CLLocationCoordinate2D zoomLocation;  //Zoom in on location
-    zoomLocation.latitude = 41.69833;
-    zoomLocation.longitude =-86.23389;
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-    //Limit location to confines of user (.5 miles)
-    
-    [mapMain setRegion:viewRegion animated: YES]; //display region
-}
-
-*/
 
  //Focus on user
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
