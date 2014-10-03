@@ -16,6 +16,8 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapMain;
-
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+-(IBAction)whereAmI:(id)sender;
 @end
 

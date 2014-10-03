@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "ViewController.h"
-#import "PFQueryTableViewController+MyTableController.h"
 
 @interface AppDelegate ()
 
@@ -22,14 +21,15 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"FECTX4Vq1u2vLMUv4sueLF27jYPRU3ekPsUXPYBx"
                   clientKey:@"XHM0swH8lB7raFn8LpHe84KMNlWZxrTAchFu1mfO"];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    //online table
+    /*[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     
     PFQueryTableViewController *controller = [[PFQueryTableViewController alloc] initWithClassName:@"Tailgate"]; //Taigate = parse class
     self.window.rootViewController=controller;
     [self.window makeKeyAndVisible];
     
-    
+    */
     
     return YES;
 }

@@ -27,7 +27,6 @@
 		07CBDFE519D7777B006147D0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBDFE419D7777B006147D0 /* Security.framework */; };
 		07CBDFE719D77782006147D0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBDFE619D77782006147D0 /* StoreKit.framework */; };
 		07CBDFE919D7778B006147D0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBDFE819D7778B006147D0 /* SystemConfiguration.framework */; };
-		07CBDFF119D7844B006147D0 /* PFQueryTableViewController+MyTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBDFF019D7844B006147D0 /* PFQueryTableViewController+MyTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +66,6 @@
 		07CBDFE419D7777B006147D0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		07CBDFE619D77782006147D0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		07CBDFE819D7778B006147D0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		07CBDFEF19D7844B006147D0 /* PFQueryTableViewController+MyTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PFQueryTableViewController+MyTableController.h"; path = "../PFQueryTableViewController+MyTableController.h"; sourceTree = "<group>"; };
-		07CBDFF019D7844B006147D0 /* PFQueryTableViewController+MyTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PFQueryTableViewController+MyTableController.m"; path = "../PFQueryTableViewController+MyTableController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +149,6 @@
 			children = (
 				07CBDF7219D63A1A006147D0 /* Info.plist */,
 				07CBDF7319D63A1A006147D0 /* main.m */,
-				07CBDFEF19D7844B006147D0 /* PFQueryTableViewController+MyTableController.h */,
-				07CBDFF019D7844B006147D0 /* PFQueryTableViewController+MyTableController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -285,7 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CBDF7A19D63A1A006147D0 /* ViewController.m in Sources */,
-				07CBDFF119D7844B006147D0 /* PFQueryTableViewController+MyTableController.m in Sources */,
 				07CBDF7719D63A1A006147D0 /* AppDelegate.m in Sources */,
 				07CBDF7419D63A1A006147D0 /* main.m in Sources */,
 			);
